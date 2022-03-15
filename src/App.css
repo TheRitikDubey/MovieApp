@@ -1,0 +1,135 @@
+.App {
+  text-align: center;
+}
+.header {
+  background-color: rgb(16, 125, 214);
+}
+.nav {
+  display: flex;
+  padding: 2px;
+  margin: 10px;
+  margin-left: 54px;
+}
+h2 {
+  margin-top: 5px;
+  margin-left: 250px;
+}
+.banner-card,
+img {
+  height: 500px;
+}
+.banner-title {
+  position: absolute;
+  top: 48vh;
+  left: 1vw;
+  height: 6rem;
+  font-weight: bolder;
+  font-size: 1.9rem;
+}
+.banner-text {
+  position: absolute;
+  top: 57vh;
+  left: 2vw;
+  height: 5rem;
+  overflow: hidden;
+  margin-right: 5vw;
+  font-weight: bolder;
+  color: rgb(18, 97, 187);
+}
+.banner-btn {
+  position: absolute;
+  top: 60vh;
+  left: 2vw;
+  overflow: hidden;
+  margin-right: 5vw;
+}
+.Trend {
+  padding: 8px;
+  text-align: center;
+}
+.AllMovie {
+  padding: 1rem;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.MovieList {
+  width: 20vw;
+  margin: 1rem;
+  color: whitesmoke;
+  position: relative;
+}
+.movie-btn {
+  position: absolute;
+  bottom: 4.5rem;
+  margin-left: 50px;
+}
+.movie-title {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  position: absolute;
+  top: 2rem;
+  color: white;
+  font-weight: 900;
+  text-shadow: 2px solid black;
+}
+.movie-img {
+  height: "40vh";
+  width: "20vw";
+}
+@media screen and (max-width: 550px) {
+  img {
+    height: 300px;
+  }
+  .banner-title {
+    top: 28vh;
+    left: 1vw;
+    height: 6rem;
+    font-weight: bolder;
+    font-size: 20px;
+  }
+  .banner-text {
+    top: 33vh;
+    left: 4vw;
+    height: 5rem;
+    overflow: hidden;
+    margin-right: 5vw;
+    font-weight: bolder;
+    color: rgb(18, 97, 187);
+  }
+  .banner-btn {
+    top: 51vh;
+    left: 29vw;
+    overflow: hidden;
+    margin-right: 5vw;
+  }
+  .movie {
+    margin-left: 10px;
+    margin-top: 12px;
+  }
+  h2 {
+    font-size: 1.9rem;
+    margin-top: -42px;
+    margin-left: 200px;
+  }
+
+  .MovieList {
+    width: 100vw;
+    margin: 0.1rem;
+  }
+  .movie-img {
+    margin-left: 52px;
+    width: 30vh;
+  }
+  .movie-title {
+    color: transparent;
+  }
+  .movie-btn {
+    bottom: 2.9rem;
+    margin-left: 25%;
+  }
+}
+.page-btn:hover {
+  cursor: pointer;
+  background-color: rgb(9, 9, 10);
+}
