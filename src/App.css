@@ -1,12 +1,10 @@
 .App {
   text-align: center;
 }
-.header {
-  background-color: rgb(16, 125, 214);
-}
 .nav {
   display: flex;
   padding: 2px;
+  background-color: skyblue;
   margin: 10px;
   margin-left: 54px;
 }
@@ -132,4 +130,11 @@ img {
 .page-btn:hover {
   cursor: pointer;
   background-color: rgb(9, 9, 10);
+}
+.fav-input{
+  padding: 15px;
+}
+.favmovie-img{
+  width: 5rem;
+  height: 3rem;
 }
