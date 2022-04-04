@@ -46,7 +46,7 @@ export default class Movie extends Component {
     );
   };
   handleLeft = () => {
-    if (this.currPage != 1) {
+    if (this.currPage !== 1) {
       this.setState(
         {
           currPage: this.state.currPage - 1,
@@ -57,7 +57,7 @@ export default class Movie extends Component {
   };
   handleClick = (value) => {
     console.log("clicked");
-    if (value != this.state.currPage) {
+    if (value !== this.state.currPage) {
       this.setState(
         {
           currPage: value,

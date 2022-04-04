@@ -5,8 +5,27 @@
   display: flex;
   padding: 2px;
   background-color: skyblue;
-  margin: 10px;
-  margin-left: 54px;
+  margin: 4px;
+  margin-left: 0px;
+}
+.nav-content {
+  display: flex;
+  padding: 0.01%;
+  margin: 1%;
+  margin-left: 2%;
+}
+.route {
+  text-decoration: none;
+}
+.movie,
+.fa {
+  color: #ffffffbb;
+  text-decoration: none;
+}
+.movie:hover,
+.fa:hover {
+  color: #ffffff;
+  text-decoration: none;
 }
 h2 {
   margin-top: 5px;
@@ -76,6 +95,13 @@ img {
   width: "20vw";
 }
 @media screen and (max-width: 550px) {
+  * {
+    box-sizing: border-box;
+  }
+  .nav-content {
+    margin-left: 0px;
+    font-size: medium;
+  }
   img {
     height: 300px;
   }
@@ -131,10 +157,13 @@ img {
   cursor: pointer;
   background-color: rgb(9, 9, 10);
 }
-.fav-input{
+.fav-input {
   padding: 15px;
 }
-.favmovie-img{
+.favmovie-img {
   width: 5rem;
   height: 3rem;
+}
+.list-group:hover {
+  cursor: pointer;
 }
