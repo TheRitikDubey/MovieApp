@@ -9,6 +9,7 @@ export default class Movie extends Component {
       parr: [1],
       currPage: 1,
       movies: [],
+      favorites:[]
     };
   }
   async componentDidMount() {
@@ -66,11 +67,31 @@ export default class Movie extends Component {
       );
     }
   };
+  addFav=(movie)=>{
+    console.log("add fav");
+    let oldData= JSON.parse(localStorage.getItem("movies") || "[]" );
+    if(this.state.favorites.includes(movie.id))
+    {
+      oldData=oldData.filter((item)=>item.id!==movie.id);
+    }
+    else{
+      oldData.push(movie);    
+    }
+    localStorage.setItem("movies",JSON.stringify(oldData));
+    console.log("old Data:",oldData);
+    this.handleFavoriteState();
+}
+handleFavoriteState=()=>{
+  let oldData= JSON.parse(localStorage.getItem("movies") || "[]" );
+  let temp=oldData.map((movie)=>movie.id);
+  this.setState({
+    favorites:[...temp],
+  })
+}
+  
+
   render() {
     console.log("render");
-    const addFav = () => {
-      console.log("add fav");
-    };
     //let movie = movies.results;
     return (
       <>
@@ -112,16 +133,15 @@ export default class Movie extends Component {
                         {movieobj.original_title}
                       </h5>
                       <p class="card-text movie-text">
-                        Some quick example text to build on the card title and
-                        make up the bulk of the card's content.
                       </p>
                       <div>
-                        <a
-                          href=""
+                        <a       
                           class="btn btn-primary movie-btn"
-                          onClick={() => addFav()}
+                          onClick={() => this.addFav(movieobj)}
                         >
-                          Add to Favorites
+                          {this.state.favorites.includes(movieobj.id) ? "Remove from Favorites" : "Add to Favorites"}
+                            
+                          
                         </a>
                       </div>
                     </div>

@@ -136,6 +136,10 @@ img {
     margin-top: -42px;
     margin-left: 200px;
   }
+  .fav-img{
+    height: 2px;
+    width: 3rem;
+  }
 
   .MovieList {
     width: 100vw;
