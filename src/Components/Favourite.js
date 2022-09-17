@@ -78,7 +78,7 @@ export default class Favourite extends Component {
     }
     handleDelete=(id)=>{
         let newarr = [];
-        newarr = this.state.movies.filter((movieObj)=>movieObj.id!=id)
+        newarr = this.state.movies.filter((movieObj)=>movieObj.id!==id)
         this.setState({
             movies:[...newarr]
         })
@@ -102,8 +102,8 @@ export default class Favourite extends Component {
         // if(this.state.currgen=="All Genres"){
         //     filterarr = this.state.movies
         // }
-        if(this.state.currgen!="All Genres"){
-            filterarr = this.state.movies.filter((movieObj)=>genreids[movieObj.genre_ids[0]]==this.state.currgen)
+        if(this.state.currgen!=="All Genres"){
+            filterarr = this.state.movies.filter((movieObj)=>genreids[movieObj.genre_ids[0]]===this.state.currgen)
         }
         let pages = Math.ceil(filterarr.length/this.state.limit);
         let pagesarr = [];
@@ -122,7 +122,7 @@ export default class Favourite extends Component {
                             <ul class="list-group favourites-genres">
                                 {
                                     this.state.genres.map((genre)=>(
-                                        this.state.currgen == genre ?
+                                        this.state.currgen === genre ?
                                         <li class="list-group-item" style={{background:'#3f51b5',color:'white',fontWeight:'bold'}} >{genre}</li> :
                                         <li class="list-group-item" style={{background:'white',color:'#3f51b5'}} onClick={()=>this.handleGenreChange(genre)}>{genre}</li>
                                     ))
