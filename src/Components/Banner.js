@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import moviefront from "./Image/moviefront.jpg";
 import { movies } from "./Getmovie";
 export default class Banner extends Component {
   render() {
