@@ -31,8 +31,7 @@ export default class Banner extends Component {
             <div className="card-body">
               <h5 class="card-title banner-title">{movie.original_title}</h5>
               <p class="card-text banner-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
+                Add your favorite Movies to your list and watch that when ever you find time.
               </p>
               {/*<a href="#" class="btn btn-primary banner-btn">
                 Go somewhere

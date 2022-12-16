@@ -16,7 +16,7 @@ export default class Navbar extends Component {
                 <h1 className="movie">Movies</h1>
               </Link>
               <Link className="route" to="/favourite">
-                <h2 className="fa">Favorites</h2>
+                <h2 className="fa">My List</h2>
               </Link>
             </div>
           </div>
